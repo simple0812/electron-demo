@@ -1,11 +1,12 @@
-import { observable, action } from 'mobx';
+import { observable, action, runInAction } from 'mobx';
 
 class GlobalStore {
   @observable collapse = false;
-  @observable locale = '';
+  @observable count = 1;
 
   @action toggle = () => {
-    this.collapse = !this.collapse;
+    console.log('xxxxx')
+    this.count += 1
   };
 }
 
